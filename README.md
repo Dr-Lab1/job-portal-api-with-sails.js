@@ -7,6 +7,10 @@
 - <a href="#dependencies" > Dependencies <a/>
 - <a href="#code-structure" > Code structure <a/>
 - <a href="#routes" > Routes <a/>
+- <a href="#links" > Links <a/>
+
+# The app overview
+The application is a LinkedIn clone for beginners
 
 # About the author 
 + [Github](https://github.com/Dr-Lab1) 
