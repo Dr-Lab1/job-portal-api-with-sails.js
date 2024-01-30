@@ -1,6 +1,7 @@
 # job-portal-api
 
-a [Sails v1](https://sailsjs.com) application
+# About the author 
+click [here](https://github.com/Dr-Lab1) to see his github profile
 
 
 ### Links
