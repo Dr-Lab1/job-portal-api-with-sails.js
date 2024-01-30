@@ -22,13 +22,21 @@ module.exports = {
         }
     },
     
-    find(req, res) {
-        // let companies = Company.all();
-        // return res.send(companies);
+    async find(req, res) {
+        try {
+            const companies = await Company.find();
+            return res.ok({companies : companies});
+        } catch (err) {
+            return res.notFound(err);
+        }
     },
 
-    findOne(req, res) {
-
+    async findOne(req, res) {
+        try {
+            
+        } catch (error) {
+            
+        }
     },
 
     update(req, res) {
