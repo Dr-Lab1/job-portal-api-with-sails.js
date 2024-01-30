@@ -19,13 +19,13 @@ The application is a LinkedIn clone for beginners developed with sails.js
 + [LinkedIn](https://www.linkedin.com/in/jonathan-kukwabantu-798238288/)
 
 # Dependencies
-*** node.js ***
+*node.js*
 
-*** sails.js ***
+*sails.js*
 
-*** sails-mysql ***
+*sails-mysql*
 
-*** nodemon ***
+*nodemon*
 
 ### Sails links
 
