@@ -81,7 +81,16 @@ module.exports = {
         }
     },
 
-    delete(req, res) {
+    async delete(req, res) {
+        try {
+            let params = req.allParams();
+            if(!params.id)
+                res.badRequest({err : "id field is required"});
 
+            const results = await Company.destroy({id : params.id});
+            return res.ok(results);
+        } catch (err) {
+            return res.serverError(err);
+        }
     },
 }
