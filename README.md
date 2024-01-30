@@ -37,6 +37,7 @@ Copy these code on your dependencies list in package.json
 
 And this on your scripts list in package.json
 
+    "dev": "nodemon app.js"
 
 # Code structure 
 1. app.js
