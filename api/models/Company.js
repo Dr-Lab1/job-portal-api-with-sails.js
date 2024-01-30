@@ -2,7 +2,7 @@ module.exports = {
 
     attributes: {
         name: {
-            type: "string",
+            type: 'string',
             required: true
         },
         description: {
@@ -10,7 +10,7 @@ module.exports = {
             required: true
         }, 
         country: {
-            typ: 'string'
+            type: 'string'
         },
         city: {
             type: 'string',

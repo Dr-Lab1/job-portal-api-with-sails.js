@@ -10,5 +10,6 @@
 
 module.exports.routes = {
 
+    'POST /companies' : "CompanyController.create"
 
 };
