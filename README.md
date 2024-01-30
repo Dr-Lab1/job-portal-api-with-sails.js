@@ -20,8 +20,11 @@ The application is a LinkedIn clone for beginners developed with sails.js
 
 # Dependencies
 *node.js*
+
 *sails.js*
+
 *sails-mysql*
+
 *nodemon*
 
 ### Sails links
