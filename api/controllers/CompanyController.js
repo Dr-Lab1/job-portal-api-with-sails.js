@@ -3,12 +3,15 @@ module.exports = {
         
         // get all params from the request
         let params = req.allParams();
-        if (!params.name) {
-            return res.badRequest({err: "name is required"});
+
+        // verified the required params
+        if(!params.name) {
+            return res.badRequest({err: 'name is required'});
         }
-        if (!params.description) {
-            return res.badRequest({err: "description is required"});
+        if(!params.description) {
+            return res.badRequest({err: 'description is required'});
         }
+        
         // store datas in db
         Company.create(
             {
@@ -18,15 +21,12 @@ module.exports = {
                 "city": params.city,
                 "address": params.address,
             }, (err, results) => {
-                if (err) {
-                    res.badRequest(err);
-                }
-
+                if(err)
+                    return res.badRequest(err);
+                
                 return res.ok(results);
             }
         );
-
-        return params;
     },
     
     find(req, res) {
