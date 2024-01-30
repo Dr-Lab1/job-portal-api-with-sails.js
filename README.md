@@ -27,6 +27,17 @@ The application is a LinkedIn clone for beginners developed with sails.js
 
 *nodemon*
 
+Copy these code on your dependencies list in package.json
+
+    "@sailshq/lodash": "^3.10.3",
+    "sails": "^1.5.9",
+    "sails-hook-orm": "^4.0.0",
+    "sails-hook-sockets": "^3.0.0",
+    "sails-mysql": "^3.0.1"
+
+And this on your scripts list in package.json
+
+
 # Code structure 
 1. app.js
     
