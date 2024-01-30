@@ -27,6 +27,18 @@ The application is a LinkedIn clone for beginners developed with sails.js
 
 *nodemon*
 
+# Code structure 
+1. app.js
+    The app's root
+
+2. config/routes.js
+
+3. api/controllers/CompanyController.js
+
+4. api/models/Company.js 
+
+# Routes 
+
 ### Sails links
 
 + [Sails framework documentation](https://sailsjs.com/get-started)
