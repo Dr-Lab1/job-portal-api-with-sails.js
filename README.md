@@ -29,17 +29,30 @@ The application is a LinkedIn clone for beginners developed with sails.js
 
 # Code structure 
 1. app.js
+    
     The app's root
 
 2. config/routes.js
 
+    Serves to configure all routes in the app
+
 3. api/controllers/CompanyController.js
+
+    Serves to manage fonctionnalities and renders responses 
 
 4. api/models/Company.js 
 
+    Discuss with the db to CRUD
+
 # Routes 
 
-### Sails links
+        "POST /companies"       : "CompanyController.create",
+        "GET  /companies"       : "CompanyController.find",
+        "GET  /company/:id"     : "CompanyController.findOne",
+        "PUT  /company/:id"     : "CompanyController.update",
+        "DELETE  /company/:id"  : "CompanyController.delete",
+
+# Sails links
 
 + [Sails framework documentation](https://sailsjs.com/get-started)
 + [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
