@@ -38,7 +38,7 @@ module.exports = {
             if(!params.id)
                 return res.badRequest({err : "id is required"});
 
-            const company = await Company.findOne(params.id);
+            const company = await Company.findOne({ id : params.id});
             
             if (company != null) {
                 return res.ok({company : company});
@@ -46,12 +46,39 @@ module.exports = {
                 return res.notFound();
             }
         } catch (error) {
-            return res.notFound(err);            
+            return res.notFound(err);
         }
     },
 
-    update(req, res) {
+    async update(req, res) {
+        try {
+            let params = req.allParams();
+            let attributes = {};
 
+            if(!params.id)
+                return res.badRequest({err : "id is required"});
+            if(!params.name)
+                return res.badRequest({err : "Name field is required"});
+            if(!params.description)
+                return res.badRequest({err : "Description field is required"});
+
+            attributes.name = params.name;
+            attributes.description = params.description;
+
+            if(params.country)
+                attributes.country = params.country;
+            if(params.city)
+                attributes.city = params.city;
+            if(params.address)
+                attributes.address = params.address;
+
+            const company = await Company.update({id : params.id}, attributes);
+
+            return res.ok(company);
+
+        } catch (err) {
+            return res.serverError(err);
+        }
     },
 
     delete(req, res) {
