@@ -33,9 +33,20 @@ module.exports = {
 
     async findOne(req, res) {
         try {
+            let params = req.allParams();
+
+            if(!params.id)
+                return res.badRequest({err : "id is required"});
+
+            const company = await Company.findOne(params.id);
             
+            if (company != null) {
+                return res.ok({company : company});
+            } else {
+                return res.notFound();
+            }
         } catch (error) {
-            
+            return res.notFound(err);            
         }
     },
 
