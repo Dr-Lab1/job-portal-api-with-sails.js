@@ -10,6 +10,11 @@
 
 module.exports.routes = {
 
-    'POST /companies' : "CompanyController.create"
+    'POST /companies' : "CompanyController.create",
+    "GET  /companies" : "CompanyController.find",
+    "GET  /company/:id" : "CompanyController.findOne",
+    "PUT  /company/:id" : "CompanyController.update",
+    "DELETE  /company/:id" : "CompanyController.delete",
+
 
 };

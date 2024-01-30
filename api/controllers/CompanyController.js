@@ -20,17 +20,19 @@ module.exports = {
                 "country": params.country,
                 "city": params.city,
                 "address": params.address,
-            }, (err, results) => {
-                if(err)
-                    return res.badRequest(err);
-                
-                return res.ok(results);
             }
-        );
+        )  
+        .then(results => {
+            return res.ok(results);
+        })
+        .catch (err =>{
+            return res.serverError(err);
+        });
     },
     
     find(req, res) {
-        res.ok("ok");
+        // let companies = Company.all();
+        // return res.send(companies);
     },
 
     findOne(req, res) {
