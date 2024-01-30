@@ -10,26 +10,15 @@
 - <a href="#links" > Links <a/>
 
 # The app overview
-The application is a LinkedIn clone for beginners
+The application is a LinkedIn clone for beginners developed with sails.js
 
 # About the author 
 + [Github](https://github.com/Dr-Lab1) 
-+ [X](https://x.com/JoBahati) 
++ [X](https://x.com/@JoBahati) 
 + [Facebook](https://facebook.com/jonathan.kukwabantu.7)
 + [LinkedIn](https://www.linkedin.com/in/jonathan-kukwabantu-798238288/)
 
 
-
-### Version info
-
-This app was originally generated on Mon Jan 29 2024 11:44:31 GMT+0100 (heure normale d’Europe centrale) using Sails v1.5.9.
-
-<!-- Internally, Sails used [`sails-generate@2.0.9`](https://github.com/balderdashy/sails-generate/tree/v2.0.9/lib/core-generators/new). -->
-
-
-
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
 -->
 
 ### Sails links
