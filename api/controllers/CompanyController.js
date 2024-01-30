@@ -1,33 +1,35 @@
 module.exports = {
-    create(req, res) {
+    
+    async create(req, res) {
         
-        // get all params from the request
-        let params = req.allParams();
+        try {
+            // get all params from the request
+            let params = req.allParams();
 
-        // verified the required params
-        if(!params.name) {
-            return res.badRequest({err: 'name is required'});
-        }
-        if(!params.description) {
-            return res.badRequest({err: 'description is required'});
-        }
-        
-        // store datas in db
-        Company.create(
-            {
-                "name": params.name,
-                "description": params.description,
-                "country": params.country,
-                "city": params.city,
-                "address": params.address,
+            // verified the required params
+            if(!params.name) {
+                return res.badRequest({err: 'name is required'});
             }
-        )  
-        .then(results => {
+            if(!params.description) {
+                return res.badRequest({err: 'description is required'});
+            }
+            
+            // store datas in db
+            const results = await Company.create(
+                {
+                    "name": params.name,
+                    "description": params.description,
+                    "country": params.country,
+                    "city": params.city,
+                    "address": params.address,
+                }
+            );
+
             return res.ok(results);
-        })
-        .catch (err =>{
-            return res.serverError(err);
-        });
+
+        } catch (err) {
+            return res.serverError(err); 
+        }
     },
     
     find(req, res) {
